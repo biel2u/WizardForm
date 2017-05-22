@@ -1,0 +1,60 @@
+﻿@model PGS.Domain.Entities.User
+
+@{
+    ViewBag.Title = "Create User";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div id="wizard">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#name" role="tab" data-toggle="tab">Name</a>
+            </li>
+            <li role="presentation">
+                <a href="#lastName" role="tab" data-toggle="tab">Last name</a>
+            </li>
+            <li role="presentation">
+                <a href="#address" role="tab" data-toggle="tab">Addres</a>
+            </li>
+            <li role="presentation">
+                <a href="#phoneNumber" role="tab" data-toggle="tab">Phone number</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="name">
+                <div class="from-group">
+                    <label>Name:</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Name)
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="lastName">
+                <div class="from-group">
+                    <label>Last name:</label>
+                    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.LastName)
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="address">
+                <div class="from-group">
+                    <label>Address:</label>
+                    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Address)
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="phoneNumber">
+                <div class="from-group">
+                    <label>Phone number:</label>
+                    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.PhoneNumber)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pull-right">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        @Html.ActionLink("Home page", "Index", "Home", new { @class = "btn btn-default" })
+    </div>
+}

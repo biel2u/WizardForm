@@ -1,0 +1,58 @@
+﻿body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Custom styles*/
+footer {
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.result {
+    margin: 0 auto;
+    width: 50%;   
+    padding: 20px;
+}
+
+/* Bootstrap overrides */
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control { 
+  background-color: white;
+  cursor: default; 
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+#wizard {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Errors */
+.field-validation-error {color: #f00;}
+.field-validation-valid {display: none;}
+.input-validation-error {border: 1px solid #f00; background-color: #fee;}
+.validation-summary-errors {font-weight: bold; color: #f00;}
+.validation-summary-valid {display: none;}

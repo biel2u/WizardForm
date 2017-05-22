@@ -1,0 +1,25 @@
+﻿@model PGS.Domain.Entities.User
+
+@{
+    ViewBag.Title = "ShowUser";
+}
+
+<div class="result">
+    <div class="alert alert-success">
+        <strong>Successfully saved!</strong>
+    </div>
+
+    @Html.HiddenFor(x => x.Id)
+        @foreach (var property in ViewData.ModelMetadata.Properties)
+        {
+            if (property.PropertyName != "Id")
+            {
+                <div class="form-group">
+                    <label>@property.PropertyName:</label>
+                    @Html.TextBox(property.PropertyName, null, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            }
+        }
+    @Html.ActionLink("Home page", "Index", "Home", new { @class = "btn btn-default pull-right" })
+</div>
+

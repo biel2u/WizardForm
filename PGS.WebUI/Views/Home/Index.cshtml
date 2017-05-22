@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Start";
+}
+
+<h1>Zadanie</h1>
+<p>Napisz prostą aplikację okienkową, czy konsolową, która umożliwi wpisanie użytkownikowi swojego Imienia, Nazwiska, Adresu zamieszkania 
+    , Numeru telefonu<br/> 
+    Po wpisaniu danych aplikacja ma ponownie wyświetlić je na ekranie jedna pod drugą.<br/>
+    Przed wyświetleniem danych, użytkownik może cofnąć się do dowolnego ekranu/kroku i zmienić wpisane wartości.<br/>
+    W jednym kroku/ekranie można wpisać tylko jedną informację, np. imię</p>
+@Html.ActionLink("Start", "CreateUser", "Home", new { @class = "btn btn-primary" })
+
